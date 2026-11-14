@@ -1,1 +1,17 @@
+- In this lab, we know the path to the admin panel which is "/admin" and we have to delete the user "Carlos.
+- But we cannot perform action because we don't have admin rights. 
+- Even after logging with default creds "wiener:peter", we don't see the option of admin panel.
+- But in lab it is mention that "/admin" identify admin by a forgeable cookie.
+- So will open the Burp suite and will intercept the traffic while we perform the logging function.
 
+- In the Request tab, we will found that in "Cookie" field there are 2 parameter field
+  - "Admin" and "Session"
+- Now by default the Admin is "false".
+- We will make it "True" and send the request. We will see that now the option of "Admin Panel" is visible of the user account.
+- When we click on it, in the request tab again there is "Admin" field which is False, we will make it true.
+- Now we entered the Admin Panel and can see the users : "Carlos" and "Wiener"
+- Now if we try to delete them, it will again show that Admin is false by default in the request tab, again make it True.
+- Because if don't make it you won't be able to delete the user, as every action require Admin Rights, from entering in the "Admin Panel" to "Deleting the user"
+- Now delete the user and Your lab completed.
+
+- You can refer to the screenshot that I had attached to get more clear understanding.
