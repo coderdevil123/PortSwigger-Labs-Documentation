@@ -1,7 +1,7 @@
 This is also simple lab, read about it in the theory part before attempting.
 
 - In this lab, it is told that the Admin Panel url is at an unpredictable place.
-- But it we can get it in within the application itself.
+- But according to the lab questions, it is within the application itself.
 - On the homepage of the lab, right click and go to "View Page Source"
 - At the bottom part of code you will see a path named "/admin-86ikkh", go to that page.
 - Delete the Carlos user and your lab completed
