@@ -1,1 +1,7 @@
+This is the very simple. Before starting the lab, read about this the theory part of this Path.
 
+On the homepage of the lab, in the url add the "/robots.txt" endpoint.
+It will take you to page where you will get another endpoint named "/administrator-panel", add the endpoint in the url.
+
+You will reach to the Admin Panel and there will 2 users named "Carlos" and "Weiner". 
+Delete Carlos and you lab is completed.
