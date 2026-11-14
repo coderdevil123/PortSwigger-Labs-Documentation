@@ -1,1 +1,13 @@
+- In this lab also we know the admin panel is at "/admin" but we can't perform the required operation of deleting "Carlos"
+- Because we don't have access, but in the question it is given, user with "roleid" 2 will have access to admin panel
 
+- Now start your Burp Suite and login with the default creds.
+- This time we will send a "Change Email" request.
+- Now send this request from "Request Tab" to "repeater tab" (right click on request and click on "Send to repeater").
+- There will be JSON format request at the botton of it.
+- In it add "roleid":2 and then send it.
+- In the Response tab you will see that the "roleid" is being updated for the default user.
+- And the admin panel is now accessable.
+- Go to admin Panel, delete the user and your lab is completed.
+
+Refere to the Screenshot for more clearity.
