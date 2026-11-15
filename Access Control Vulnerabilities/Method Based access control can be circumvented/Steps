@@ -1,1 +1,13 @@
+In this lab, access control is implemented on the basic of HTTP methods.
+Get familiar with admin panel with the given creds, and also login with normal user account.
 
+- Now launch your burp suit and begin the exploitation
+- first login in the admin account and go the admin panel, and upgrade the user "Carlos" and send this request to the repeater (Request 1).
+- Now login with your normal user account and after that click on "My account", send this request to repeater also (Request 2).
+
+- Now we have to upgrade ourself without logging as Admin, what about using cookies ?
+- Take your cookie of Request 2 and replace the Cookie of request 1 with it.
+- Now if you send the request, you will get "Unauthorised" msg.
+- What if we try to change the request ???? as currently it is POST, what if we do it GET ??
+- Right click on the same request, click on "Change Request Method" and then in the username field put "wiener" and send request.
+- BINGO... you will get a 302 response, confirming that our user is being upgrade and you will get the "Lab Solved" banner.
