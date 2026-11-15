@@ -1,1 +1,20 @@
+This lab is not as basic as previous one's.
 
+- In this lab, it said that website have unauthenticated admin panel at "/admin".
+- But frontend is configured to block the external IP.
+- But backend framework support "X-Original-URL".
+
+- Now what is X-Original-URL ?
+  -It is a non standard HTTP request header used by reverse proxies and web servers (like IIS, Nginx, or Apache) to pass the client's original URL path to a backend application.
+
+- In lab, if we try to access the "/admin", we will get access denied.
+- Launch your Burp suit and intercept the traffic
+- The request you get while access the "/admin", send it to repeater.
+- Then in that request, change the first query line from "/admin" to "/" and,
+- Below cookie header, add "X-Original-URL: /admin" and send the request in the Repeater, you will get a 200 response and will be able to see the user.
+- Now if you try to delete it, it will again give you "Access Denied".
+- For add, the request that you had updated, send that request again to the repeater and do the following changes:
+  - Change first line path from "/" to "/?username=carlos".
+  - Change the X-Original-URL value to "/admin/delete" and send.
+- You will get a 302 response in the response tab, means the user is deleted successfully.
+- And on the main page also you will get the Notification of lab solved.
