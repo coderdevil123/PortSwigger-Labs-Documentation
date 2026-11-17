@@ -1,1 +1,10 @@
+In this lab, we can't access "Carlos" just by changing the parameter. 
+- When we try to change the parameter and enter, it will redirect us to login page.
+- But here is the catch that the redirect request carry sensitive information.
 
+- Launch your Burp suit and intercept the traffic and capture the redirect request.
+- Send this request to repeater.
+- And in repeater send the request and check the response.
+- You will see a 302 code which means "temporarily moved" (but for your understanding, just for lab only, it means page existed and we can't directly see the content but can see via redirection).
+- When you scroll down you will see the name "carlos" and the API key.
+- Submit it and your lab is completed.
