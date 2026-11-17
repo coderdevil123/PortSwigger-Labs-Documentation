@@ -1,1 +1,12 @@
+This lab is also similar to previous lab of IDOR vulnerability, but the catch is that User ID is unpredictable.
 
+- But even if the ID is unpredictable we can still find it within the application.
+- As within the Application user are being referenced wherever they review or comment.
+
+- In this lab also we are given with default creds of "wiener:peter" and we need to find the API key of "carlos"
+- By logging in to wiener account, you will see that parameter value is a random identifer.
+- So we check the post given on the home page of the lab. Click on the first post.
+- You can see the name "carlos" under the post. Right on the name and open in new tab.
+- Then you can see the Unique Identifier for "carlos". Copy that and past it in the URL parameter field where you have login as "Wiener".
+- And yeah.. now you are Carlos.. copy the API key and submit.
+- Your lab completed.
