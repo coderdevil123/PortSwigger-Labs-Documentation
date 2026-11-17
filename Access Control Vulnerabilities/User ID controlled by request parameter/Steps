@@ -1,1 +1,9 @@
+This is the simplest lab under Access Control
+- This lab tells how IDOR vulnerability is being exploited. What is IDOR ?
+  - It is a website security flaw where changing a simple number or name in a web link (URL) lets you see someone else's private information.
 
+- In this lab we are given the default creds - wiener:peter.
+- We login to this account and we can see that there is an API key
+- Now we have to find the same for the "carlos" user.
+- For that we have just change the parameter in the URL from "wiener" to "carlos".. and Yeah.. we reached to Carlos account.
+- Copy the key and submit it.. Your lab completed.
