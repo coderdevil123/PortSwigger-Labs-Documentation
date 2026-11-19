@@ -1,1 +1,15 @@
+In this lab, we have to disclose the admin password and delete the user "Carlos"
 
+- To being, we try to login with out default creds.
+- once you login in we can see the "update email" and "update password" field.
+- The password is being masked, so we can't see it directly.
+- Now in the URL parameter, if we change it from "wiener" to "administrator", then we can see the admin page.
+- Still the password is masked, but there is one way to see it and that's when we intercept the traffic and analyse the request.
+
+- So fire up your burp suit and intercept the traffic.
+- So you will notice (with your default account) that if you try to update your password, it will masked on the screen but will be visible in the request.
+- Similarly we have to do for the admin page.
+- Change the URL parameter, go to admin page, just click on update password (don't change it).
+- Now in the request, the password will be visible in the "password" parameter.
+- Copy that and login as the administrator and delete the user "carlos".
+- And your lab is completed.
