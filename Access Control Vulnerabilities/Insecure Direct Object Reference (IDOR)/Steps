@@ -1,1 +1,16 @@
+This lab is the proper example for static URL files IDOR vulnerability.
 
+- In this lab, chat logs are stored directly on the server file system and retrieve them using static URL.
+- We have to analyse those chat and find the cred in that log and login as "carlos"
+
+- When you go to home page of the lab, you will see a option of "Live Chat".
+- Once you go to that page, you can send chat and user name "Hal Pline" will reply.
+- Also there is an option "view transcript", when you click on it, a txt file is being downloaded like "2.txt"
+- you will notice these files are being downloaded in a sequence "2.txt, 3.txt, .." so on but there is no "1.txt"
+
+- To find out that, launch your Burp suite and intercept the traffice and capture the download request.
+- Once you get the "GET" request of the view transcript, send it to Repeater.
+- Now in the repeater, change the text file to "1.txt" and send.
+- In response you will transcript which also include a password.
+- use that password to login as "carlos"
+- Your lab is done.
