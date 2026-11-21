@@ -1,1 +1,12 @@
+This lab is 90% same as the lab of "Method based access control can be circumvented", just difference is that we don't need to change the method of the request.
+So to being with, Get familiar with admin panel with the given creds, and also login with normal user account.
 
+- Now launch your burp suit and begin the exploitation
+- first login in the admin account and go the admin panel, and upgrade the user "Carlos" and send this request to the repeater (Request 1).
+- Now login with your normal user account and after that click on "My account", send this request to repeater also (Request 2).
+
+- Now we have to upgrade ourself without logging as Admin, what about using cookies ?
+- Take your cookie of Request 2 and replace the Cookie of request 1 with it.
+- Now if you send the request, you will get 302 code msg means we are acting like an admin now.
+- Now in the username field put "wiener" and send request.
+- AND DONE... refresh your screen you will see the admin panel option and your lab is completed.
