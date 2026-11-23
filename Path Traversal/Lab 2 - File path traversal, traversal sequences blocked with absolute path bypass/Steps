@@ -1,1 +1,12 @@
+This is lab is also simple..
+- In previous lab we use traversal sequence "../" but in this lab it is block.
+- In this lab there is absolute path bypass means that user had supplied full file path.
+- We can directly give the file path in the parameter field and we will get the content.
 
+In this lab, similiary it is told that vulnerability is in the display of product image.
+- Open any article.
+- open the image of that article in new tab.
+- Now launch the burp suite, and now in the "filename" paramter add "/etc/passwd", as asked in question.
+- Capture this request and send to repeater.
+- Now in repeater send this enter and in response you will get the content present at "/etc/passwd"
+- your lab completed.
