@@ -1,1 +1,13 @@
+Path traversal is also known as directory traversal.
+These vulnerabilities enable an attacker to read arbitrary files on the server that is running an application. 
+This might include:
+- Application code and data.
+- Credentials for back-end systems.
+- Sensitive operating system files
 
+FOR EXAMPLE:
+Imagine an online store uses a URL like ://example.com to let customers download their receipts from a folder on the server called /var/www/invoices/.
+Behind the scenes, the application simply takes whatever text is placed after file= and attaches it straight to that folder path without checking if it is safe. 
+Because the app blindly trusts the input, an attacker can swap invoice.pdf for ../../../etc/passwd (or ../../../app/.env).
+Those ../ sequences instruct the server's operating system to step backward out of the invoices folder into restricted system directories, 
+tricking the website into returning sensitive passwords, configuration keys, or source code instead of a receipt.
