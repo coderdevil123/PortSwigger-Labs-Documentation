@@ -1,1 +1,13 @@
+Now there are many web applications try to prevent attackers from accessing restricted files (like /etc/passwd) by sanitizing user input.
+A common mistake developers make is writing a filter that searches for ../ and removes it only one time.
+So to bypass this filter we use nesting technique of adding one traversal sequence inside other. Eg - "....//"
+- The filter scans for ../: It finds ../ right in the middle: .. + ../ + /
+- The filter deletes the middle ../: The outer characters collapse together: .. + / = ../
 
+In this lab, similiary it is told that vulnerability is in the display of product image.
+- Open any article.
+- open the image of that article in new tab.
+- Now launch the burp suite, and now in the "filename" paramter add "....//....//...//etc/passwd", as asked in question.
+- Capture this request and send to repeater.
+- Now in repeater send this enter and in response you will get the content present at "/etc/passwd"
+- your lab completed.
