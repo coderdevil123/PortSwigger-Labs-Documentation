@@ -1,1 +1,11 @@
+Now some web application have filter of detecting "../".. and to bypass this we use URL encoding.
+In URL encoding, ../ -> %2e%2e%2f, also we can perform double encoding when the front-end decode the first encoding.
+- %252e%252e%252f - this is double URL encoding.
 
+In this lab, similiary it is told that vulnerability is in the display of product image.
+- Open any article.
+- open the image of that article in new tab.
+- Now launch the burp suite, and now in the "filename" paramter add "..%252f..%252f..%252fetc/passwd", as asked in question.
+- Capture this request and send to repeater.
+- Now in repeater send this enter and in response you will get the content present at "/etc/passwd"
+- your lab completed.
