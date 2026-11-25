@@ -1,1 +1,10 @@
+Now an application may require the user-supplied filename to start with the expected base folder, such as /var/www/images.
+Even if a website forces your file path to start inside a safe folder, you can still escape it by typing the safe folder's name first and then using ../ to step back out.
 
+In this lab, similiary it is told that vulnerability is in the display of product image.
+- Open any article.
+- open the image of that article in new tab.
+- Now launch the burp suite, and now in the "filename" paramter add "/var/www/images/../../../etc/passwd", as asked in question.
+- Capture this request and send to repeater.
+- Now in repeater send this enter and in response you will get the content present at "/etc/passwd"
+- your lab completed.
