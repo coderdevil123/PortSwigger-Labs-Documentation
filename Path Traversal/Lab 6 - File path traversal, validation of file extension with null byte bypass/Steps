@@ -1,1 +1,11 @@
+Now An application may require the user-supplied filename to end with an expected file extension, such as .png/.jpg.
+Even if a website forces your file name to end with .png/.jpg, you can put a hidden "stop sign" (%00) right before .png/.jpg so the server ignores .png/.jpg and opens the secret file instead.
+%00 is the URL-encoded null byte - Character '0'
 
+In this lab, similiary it is told that vulnerability is in the display of product image.
+- Open any article.
+- open the image of that article in new tab.
+- Now launch the burp suite, and now in the "filename" paramter add "../../../etc/passwd%00.jpg", as asked in question.
+- Capture this request and send to repeater.
+- Now in repeater send this enter and in response you will get the content present at "/etc/passwd"
+- your lab completed.
